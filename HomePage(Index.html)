@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Our Company</title>
+    <link href="site.css" rel="stylesheet">
+	
+	<style>
+/* Background Image*/	
+	body{
+	background-image:url(srh5.png);
+	    background-size: 1280px 800px;
+	}
+	
+	</style>
+	<img src="logo1.png"
+	 style="width:170px;height:100px">
+	 
+	 <span style="display:inline-block; width: 10px;"></span>
+	 
+	 <img src="logo2.png"
+	  style="width:170px;height:100px">
+	  
+	 <span style="display:inline-block; width: 30px;"></span>
+	 
+	 <img src="logo3.png"
+	  style="width:840px;height:100px">
+	  
+	  
+<!--For Slider-->	  
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="engine1/style.css" />
+<script type="text/javascript" src="engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+<body>
+
+<nav id="nav01"></nav>
+
+    <div id="main">
+	
+	
+<!--- Slider Part-->
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="data1/images/dean1.jpg" alt="Speech by Dean Prof.Moeckel" title="Speech by Dean Prof.Moeckel" id="wows1_0"/></li>
+		<li><a href="http://wowslider.com"><img src="data1/images/college.jpg" alt="carousel slider" title="Rennovations in the Blue Tower" id="wows1_1"/></a></li>
+		<li><img src="data1/images/international_students.jpg" alt="International Students Week" title="International Students Week" id="wows1_2"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="Speech by Dean Prof.Moeckel"><span><img src="data1/tooltips/dean1.jpg" alt="Speech by Dean Prof.Moeckel"/>1</span></a>
+		<a href="#" title="Rennovations in the Blue Tower"><span><img src="data1/tooltips/college.jpg" alt="Rennovations in the Blue Tower"/>2</span></a>
+		<a href="#" title="International Students Week"><span><img src="data1/tooltips/international_students.jpg" alt="International Students Week"/>3</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.com">slider html5</a> by WOWSlider.com v8.0m</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine1/wowslider.js"></script>
+<script type="text/javascript" src="engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+
+
+
+	 <span style="display:inline-block; width: 225px;"></span>
+     <img src="logo4.png"
+	  style="width:300px;height:400px">
+	  	 <span style="display:inline-block; width: 10px;"></span>
+<!--Listen to news -->
+	    <input type="image" src="logo5.png"
+		alt="Submit" width="100" height="150">
+		
+<!--Read News -->
+	 <span style="display:inline-block; width: 50px;"></span>
+	    <input type="image" src="logo6.png"
+		alt="Submit" width="100" height="150">
+		
+<!--Watch Videos-->
+	 <span style="display:inline-block; width: 50px;"></span>
+	    <input type="image" src="logo7.png"
+		alt="Submit" width="100" height="150">
+		
+<!--Search-->
+	 <span style="display:inline-block; width: 50px;"></span>
+	    <input type="image" src="logo9.png"
+		alt="Submit" width="100" height="150">
+		
+<!--SRH Music-->
+	 <span style="display:inline-block; width: 50px;"></span>
+	    <input type="image" src="logo10.png"
+		alt="Submit" width="100" height="150">
+		
+<!--Login Signup-->
+	 <span style="display:inline-block; width: 50px;"></span>
+	    <input type="image" src="logo11.png"
+		alt="Submit" width="100" height="150">	  
+	 
+	  	 <span style="display:inline-block; width: 300px;"></span>
+		 
+<!--Text for the news icon-->
+          Listen to news
+		  		  <span style="display:inline-block; width: 50px;"></span>
+				  
+<!--Text for read news-->
+		  Read News  
+		  <span style="display:inline-block; width: 50px;"></span>
+		  
+<!--Text for Watch Videos-->
+		  <span style="display:inline-block; width: 20px;"></span>
+          Watch Videos
+		  
+<!--Text for Search-->
+		  <span style="display:inline-block; width: 70px;"></span>
+          Search 
+		  
+<!--Text for SRH Music-->
+		  <span style="display:inline-block; width: 90px;"></span>
+          SRH Music
+		  
+<!--Login/signup-->
+		  <span style="display:inline-block; width: 70px;"></span>
+         Login/Sign up 
+		 
+    <footer id="foot01"></footer>
+
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
