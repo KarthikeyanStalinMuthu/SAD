@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+  <title>Join SRH Hochscule</title>
+    <link href="site.css" rel="stylesheet">
+
+<img src="logo1.png"
+style="width:170px;height:100px">
+<span style="display:inline-block; width: 10px;"></span>
+
+<img src="logo2.png"
+style="width:170px;height:100px">
+<span style="display:inline-block; width: 30px;"></span>
+
+<img src="logo3.png"
+style="width:840px;height:100px">
+
+	<style>
+/* Background Image*/	
+	body{
+	background-image:url(background.png);
+	    background-size: 1280px 800px;
+	}
+	#header {
+	width:1200px;
+	
+    background-color:white;
+    color:white;
+    text-align:left;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:white;
+    height:357px;
+    width:400px;
+    float:left;
+    padding:5px;	      
+}
+#section {
+background-color:white;
+    line-height:30px;
+    width:790px;
+    float:left;
+    padding:5px;
+	
+}
+
+#foot{
+width:805px;
+height:200px;
+
+}
+
+<!-- Start WOWSlider.com HEAD section --> <!-- add to the <head> of your page -->
+	<link rel="stylesheet" type="text/css" href="engine0/style.css" />
+	<script type="text/javascript" src="engine0/jquery.js"></script>
+	
+	</style>
+	
+		<TITLE>getElementById</TITLE>
+		<SCRIPT LANGUAGE = "javascript">
+		
+			function validate(){
+	
+			var name_error = checkname();
+			var email_error = checkemail();
+			var subject_error = checksubject();
+			var message_error = checkmessage();
+			// Accessing the textbox_1 by ID
+			if( document.getElementById("textbox_1").value==''){
+				document.getElementById("textbox_1").style.backgroundColor='red';
+			}
+}
+		</SCRIPT>
+</head>
+	
+<!-- End WOWSlider.com HEAD section -->
+
+<BODY>
+<nav id="nav01"></nav>
+<div id="header">
+<h1>Join us</h1>
+</div>
+
+<div id="nav">
+<!-- Address of the college. Used <br> for line-break-->
+<p> Ludwig-Guttmann-Straße 6, 69123 Heidelberg
+info@mysite.com <br>
+Tel: 123-456-7890<br>
+Fax: 123-456-7890</p>
+</div>
+
+<div id="section">
+	<FORM NAME="frmone"  METHOD="POST" ACTION="" >
+
+	<!--<FORM NAME="frmone"  METHOD="POST" ACTION="send_mail.php" >-->
+<table >
+  <tr>
+  
+   <td><input type="text" name="name" value="" placeholder="Name" ID="textbox_1" SIZE="30">
+   <SPAN STYLE=color:lightgreen ID="name_error"></SPAN><br>
+   
+   <input type="text" name="email" value="" placeholder ="Email" ID="textbox_2" SIZE="30">
+   <SPAN STYLE=color:lightgreen ID="email_error"></SPAN><br>
+   
+   <input type="text" name="subject" value="" placeholder ="subject" ID="textbox_3" SIZE = "30">
+   <SPAN STYLE=color:lightgreen ID="subject_error"></SPAN><br>
+   
+  <TEXTAREA Name="message" ROWS=3 COLS=80 value="message" placeholder = "Message - 150 Characters" ID="textbox_4" SIZE ="150"></TEXTAREA>
+  <SPAN STYLE=color:lightgreen ID="message_error"></SPAN><br>
+
+  <input type="button" value=" Send " onclick="validate()"></td>
+  <!--<a href="http://localhost:3000">Email Form</a>-->
+  </tr>
+  <tr>
+  <td div id="foot">
+ 
+  </td>
+  </table>
+  </FORM>
+</div> 
+
+
+  <script src="script.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('foot');
+        var mapOptions = {
+          center: new google.maps.LatLng(49.415133, 8.649330),
+          zoom: 7,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+	  
+// User input validation in the - Joinus.html page
+		
+			function validate(){
+			//To set the background color for all the input boxes if it is empty
+			background_color();
+			//To check whether the name i/p is filled
+			var name_error = checkname();
+			//To check whether the email i/p is filled
+			var email_error = checkemail();
+			//To check whether the subject is filled
+			var subject_error = checksubject();
+			//To check any messages left in the box
+			var message_error = checkmessage();
+			
+			
+			if(name_error && email_error && subject_error && message_error){
+				document.frmone.submit();
+				
+				}
+			else {
+			return false;
+			}	
+	}		
+				
+// Background_color()  -- if it's empty
+			function background_color(){
+			if( document.getElementById("textbox_1").value=='' ){
+				document.getElementById("textbox_1").style.backgroundColor='grey';
+			}
+						if( document.getElementById("textbox_2").value=='' ){
+				document.getElementById("textbox_2").style.backgroundColor='grey';
+			}
+						if( document.getElementById("textbox_3").value=='' ){
+				document.getElementById("textbox_3").style.backgroundColor='grey';
+			}
+						if( document.getElementById("textbox_4").value=='' ){
+				document.getElementById("textbox_4").style.backgroundColor='grey';
+			}
+			}
+			
+// check_name() 
+			function checkname(){
+			var name = document.frmone.name.value;
+			if(name==""){
+				document.getElementById("name_error").innerHTML = "No Name";
+				return false;
+			}
+			else{
+			document.getElementById("name_error").innerHTML = "";
+			return true;
+			}
+			}
+						
+// checkemail() -- Method to validate the email address 
+			function checkemail(){
+			// reference to get email by using document.section....
+			 var email = document.frmone.email.value;
+				if (email==""){
+					document.getElementById("email_error").innerHTML = "No email address";
+					return false;
+					}
+				else {
+					document.getElementById("email_error").innerHTML = "";
+					return true;
+					}
+			}
+			
+//checksubject() -- Method to check subject
+			function checksubject(){
+			var subject = document.frmone.subject.value;
+			if(subject==""){
+				document.getElementById("subject_error").innerHTML = "No subject";
+				return false;
+			}
+			else{
+			document.getElementById("subject_error").innerHTML = "";
+			return true;
+			}
+			}
+			
+//checkmessage() -- check the message entered	
+			function checkmessage(){
+			var message = document.frmone.message.value;
+			if(message==""){
+				document.getElementById("message_error").innerHTML = "No message";
+				return false;
+			}
+			else{
+			document.getElementById("message_error").innerHTML = "";
+			return true;
+			}
+			}
+
+			
+		</SCRIPT>
+    </script>
+	 
+	 		  <span style="display:inline-block; width:50px;"></span>
+
+	 <div id="main">
+    <footer id="foot01"></footer>
+	</div>
+  <script src="script.js"></script>
+
+</BODY>
+</HTML>
