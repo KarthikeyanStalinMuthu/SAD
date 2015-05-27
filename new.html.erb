@@ -1,0 +1,17 @@
+<h> hello guys! </h>
+
+<%= form_for :people do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
