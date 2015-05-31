@@ -1,0 +1,30 @@
+#/Users/karthikeyanstalinmuthu/Ruby
+# Path to the interpreter - which will execute our script
+
+require 'sqlite3'
+
+begin
+    
+    fin = File.open "language_courses.rtf" , "rb"
+    img = fin.read
+    
+rescue SystemCallError => e      
+    puts e
+ensure
+    fin.close if fin 
+end
+
+begin
+    
+    db = SQLite3::Database.open 'podcast.db'
+    blob = SQLite3::Blob.new img
+    db.execute "INSERT INTO informatics VALUES(7,'club', ?, 'rtf')", blob
+    
+rescue SQLite3::Exception => e 
+    
+    puts "Exception occurred"
+    puts e
+    
+ensure
+    db.close if db
+end
