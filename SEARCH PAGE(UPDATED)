@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+  <title>Search</title>
+    <link href="site.css" rel="stylesheet">
+      <meta charset="utf-8">
+      <title>jQuery UI Autocomplete functionality</title>
+      <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	
+  <style>
+/* Background Image*/	
+	body{
+	background-image:url(search.png);
+	    background-size: 1280px 800px;
+	}
+	</style>
+
+	 <img src="logo1.png" style="width:170px;height:100px">
+	
+	 <span style="display:inline-block; width: 10px;"></span>
+	 <img src="logo2.png" style="width:170px;height:100px">
+	  
+	 <span style="display:inline-block; width: 30px;"></span>
+	 <img src="logo3.png"style="width:840px;height:100px">
+
+<!-- Javascript -->
+ 
+   <script>
+   //*** Static***8
+
+         $(function() {
+            var arrays = [
+              "Language",
+              "SadMay2015",
+              "SAD",
+              "AdmissionProcedures",
+              "Internationalweek",
+              "LanguageCourses",
+             ];
+            $( "#search" ).autocomplete({
+               minLength:3,
+               autoFocus: true,
+               source: arrays
+            });
+            $( "#search" ).autocomplete( "close" );
+         });
+
+//**** Dynamic******
+
+      $( ".selector" ).autocomplete( "enable" );
+          jQuery(document).ready(function($){
+              $( "#search" ).autocomplete({
+                source: "use.php",
+                width: 260,
+                matchContains: true,
+                selectFirst: false,
+                dataType: "json",
+               minLength: 1
+           });
+            });
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+//<!--Get the value from the search box-->
+//<!--Concatenate the var Y with the searched input -->
+function search (form) {
+//	var x = document.getElementById("search").value;-->
+    var x = myform.inputbox.value;
+  if (x == null || x == ""){
+    alert ("Please fill it out to proceed further");
+    return false;
+  }
+	var y = "You have searched for : ";
+	var z = y.concat(x);
+	document.getElementById("demo").innerHTML =  z;
+	return x;
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<nav id="nav01"></nav>
+		<span style="display:inline-block; width:300px;"></span><br>
+		<span style="display:inline-block; width:300px;"></span>
+
+    <font color = "BLACK" />
+
+    <div class="ui-widget">
+    <FORM NAME="myform" ACTION="" METHOD="POST">
+    <b>Search :</b>  
+     <INPUT id="search" TYPE="text" NAME="inputbox" VALUE="" size="50"><P>
+    </FORM> 
+    <INPUT TYPE="button" NAME="button" Value="Search" onClick="search(this.form)">
+    </div>
+
+	<p id="demo"></p>
+
+    <footer id="foot01"></footer>
+  <script src="script.js"></script>
+</BODY>
+
+</HTML>
