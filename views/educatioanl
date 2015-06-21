@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+  <title>Educational</title>
+    <link href="site.css" rel="stylesheet">
+	<style>
+/* Background Image*/	
+	body{
+	background-image:url(educational.png);
+	    background-size: 1280px 800px;
+	}
+	</style>
+		<img src="logo1.png"
+	 style="width:170px;height:100px">
+	 <span style="display:inline-block; width: 10px;"></span>
+	 
+	 <img src="logo2.png" style="width:170px;height:100px">
+	 <span style="display:inline-block; width: 30px;"></span>
+	 
+	 <img src="logo3.png"style="width:840px;height:100px">
+</head>
+<BODY>
+<nav id="nav01"></nav>
+    <div id="main">
+		 <span style="display:inline-block; width: 300px;"></span>
+	     <img src ="educational2.png" style="width:500px;height1050px"><BR>
+	
+	<!--<span Style="display:inline-block;width: 10px;"></span>-->
+         <font size="4" color ="Black"><b><i>Choose the department:</i></b></font><BR>
+         <p> </P> <BR>
+
+<div id="container">
+			<a href="#" class="myButton" onclick="location.href='informatics.html'">Business Informatics</a>
+			<p> </P> <BR>
+			<a href="#" class="myButton" onclick="location.href='informationtechnology.html'">Information Technology</a>
+</div>
+
+<!--Business Informatics-->
+<Script>
+function informatics(){
+    document.getElementById("demo").innerHTML = "Hello World";
+
+}
+<!--Information Technology-->
+function IT(){
+
+}
+</script>
+    <footer id="foot01"></footer>
+  </div>
+  <script src="script.js"></script>
+</BODY>
+</HTML>
