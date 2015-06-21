@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+  <title>campus_news_read</title>
+    <link href="site.css" rel="stylesheet">
+	<style>
+/* Background Image*/	
+	body{
+	background-image:url(informatics2.png);
+	    background-size: 1600px 1300px;
+	}
+	</style>
+	  <img src="logo1.png" style="width:170px;height:100px">
+	 
+	 <span style="display:inline-block; width: 10px;"></span>
+	 <img src="logo2.png"style="width:170px;height:100px">
+	  
+	 <span style="display:inline-block; width: 30px;"></span>
+	 <img src="logo3.png" style="width:840px;height:100px">
+
+<!-- Java script codes for getting values from the database-->
+ <script type="text/javascript">
+
+// Passing the table name and the version as the parameters to the method
+
+	     var database = openDatabase('podcast.db','3.8.10.2');
+         var output;
+
+//Retrieving the data from the table 
+         database.transaction(function (tx) {
+         	
+            tx.executeSql('SELECT * FROM Informatics where articlename = 'Informatics'', 
+            	[], function (tx, results) 
+            {
+               for (i = 0; i < len; i++){
+                  output = "<p><b>" + results.rows.item(i).log + "</b></p>";
+                  document.querySelector('#info').innerHTML +=  output;
+               }
+            }, null);
+         });
+         return output;
+</script>
+
+</head>
+<BODY>
+<nav id="nav01"></nav>
+
+    <div id="main">
+
+<!-- Passing the values from the JAVA SCRIPT to the HTML PAGE
+Displaying the international week details in the below DIV id-->
+<div id="info" name="info">output</div>
+	
+<!--News can also be HARDCODED in the below way -->
+<!-- description-->
+	  <span style="display:inline-block; width:300px;left:500px;"></span>
+		  <font size="5" color ="orange"><b><i>Read IT Educational news!</i></b></font><BR>
+		
+		  
+<span style="line-height:3em;overflow:scroll;padding:5px;color:#714D03;scrollbar-base-color:#DEBB07;position:absolute; top:250px; left:400px; width:700px; height:150px;"> <font size="5" color ="orange"><b><i><u>Speech by the Dean Prof.Moeckel</u></i></b></font> <BR></BR> <font size="3" color ="orange"><b> A speech was given by the dean of Informatics Prof.Moeckel, to thank the students outstanding performance lately in the projects and assignments done by them. He expressed this by saying he has never expected such an outcome. The dean also take his  time to thank the professors of the faculty for their marvelous efforts in getting the best out of their students. As a result of that, the dean Prof. Moeckel has invited the students and teachers of the faculty to a dinner in a small celebration for all the recent achievements.</b></font>
+
+</span>
+
+  <footer id="foot01"></footer>
+  </div>
+  <script src="script.js"></script>
+</BODY>
+</HTML>
