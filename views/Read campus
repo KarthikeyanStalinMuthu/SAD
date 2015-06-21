@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+  <title>campus_news_read</title>
+    <link href="site.css" rel="stylesheet">
+	<style>
+/* Background Image*/	
+	body{
+	background-image:url(SRH1.png);
+	    background-size: 1600px 1000px;
+	}
+	</style>
+	  <img src="logo1.png" style="width:170px;height:100px">
+	 
+	 <span style="display:inline-block; width: 10px;"></span>
+	 <img src="logo2.png"style="width:170px;height:100px">
+	  
+	 <span style="display:inline-block; width: 30px;"></span>
+	 <img src="logo3.png" style="width:840px;height:100px">
+</head>
+
+<!-- Java script codes for getting values from the database-->
+ <script type="text/javascript">
+
+// Passing the table name and the version as the parameters to the method
+
+	     var database = openDatabase('podcast.db','3.8.10.2');
+         var output;
+
+//Retrieving the data from the table 
+         database.transaction(function (tx) {
+         	
+            tx.executeSql('SELECT * FROM Informatics where articlename = 'internationalweek'', 
+            	[], function (tx, results) 
+            {
+               for (i = 0; i < len; i++){
+                  output = "<p><b>" + results.rows.item(i).log + "</b></p>";
+                  document.querySelector('#info').innerHTML +=  output;
+               }
+            }, null);
+         });
+         return output;
+</script>
+
+<BODY>
+<nav id="nav01"></nav>
+
+    <div id="main">
+<!-- Passing the values from the java script to the HTML PAGE
+	 Displaying the international week details in the below DIV id-->
+
+<div id="info" name="info">output</div>
+
+<p> </p>
+ <footer id="foot01"></footer>
+  </div>
+  <script src="script.js"></script>
+</BODY>
+</HTML>
