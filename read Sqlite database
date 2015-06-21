@@ -1,0 +1,81 @@
+#/Users/karthikeyanstalinmuthu/Ruby_sqlite_DB
+
+# To retrieve the values from the Sqlite Database 
+
+require "Sinatra"
+require "sqlite3"
+
+class Read_value
+
+# intialize method
+	def intialize(value)
+		@search = value
+		#puts "you are searching for :#{@search}" 
+		return @search
+	end
+
+# Read Method
+	def read
+# Create a object to make an connection to the sqlite database
+# podcast - Database Name
+	    database = SQLite3::Database.open 'podcast.db'
+
+# Search Value
+		var = @search
+		var.strip
+		var = "#{var}%"
+		#puts var
+
+# Fetch data from the table located in the Database
+	  #  statement = database.prepare "SELECT articleid FROM informatics where articlename LIKE 'sad%'"
+
+# Execute the sql Statement 
+# To get the documents available in the table
+		#result = statement.execute("SELECT articleid FROM informatics where articlename LIKE ?", "#{var}%")
+		statement = database.prepare "SELECT content FROM informatics where articlename LIKE ?"
+		statement.bind_param 1, var
+		result = statement.execute
+		
+		#result.each do |i|
+		#	puts "#{i}"
+		#end
+		#result = statement.execute
+		@content = Array.new(20)			#declaring array 
+		str = String.new					#Declaring String to store the contents
+
+# Print the values
+	result.each do |row|
+		#puts row.join "\s"
+		#@content.push(row).split()
+		str = row.join "\s"
+			end		
+
+# find the length of the arrray
+	#length = @content.length
+	#puts length
+
+	len = str.length						#Length of the string (content)
+	puts len
+
+	a = str.split(".")
+	
+
+	rescue SQLite3::Exception => e
+		puts "Exception occured"
+		puts e
+
+
+	ensure 
+		statement.close if statement
+		database.close if database			
+				
+	end
+end
+
+#Object Instantiation 
+#obj = Read_value.new
+
+#obj.intialize('sad')
+#obj.read
+
+
