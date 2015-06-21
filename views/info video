@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+  <title>campus_news_read</title>
+    <link href="site.css" rel="stylesheet">
+	<style>
+/* Background Image*/	
+	body{
+	background-image:url(education1.png);
+	    background-size: 1600px 1300px;
+	}
+	</style>
+	  <img src="logo1.png" style="width:170px;height:100px">
+	 
+	 <span style="display:inline-block; width: 10px;"></span>
+	 <img src="logo2.png"style="width:170px;height:100px">
+	  
+	 <span style="display:inline-block; width: 30px;"></span>
+	 <img src="logo3.png" style="width:840px;height:100px">
+</head>
+<BODY>
+<nav id="nav01"></nav>
+
+    <div id="main">
+	
+<!-- description-->
+ <span style="display:inline-block; width:300px;left:500px;"></span>
+ <font size="5" color ="orange"><b><i>Latest Informatics Videos!</i></b></font><BR>
+		
+<!-- Videos played with the help of the video tag 
+file 'informat.mp4' is located inside the folder-->
+
+<span style="line-height:3em;padding:5px;color:#714D03;scrollbar-base-color:#DEBB07;position:absolute; top:250px; left:300px; width:300px; height:150px;"> <font size="5" color ="Black"><b><i><u> NEW SRH advertisement</u></i></b></font> 
+	
+<video width="320" height="240" controls>
+  <source src="informat.mp4" type="video/mp4"> 
+</video>
+
+
+<!-- Following videos plays with the help of the iframe 
+, i.e by embedding the youtube link  -->
+
+<span style="line-height:3em;padding:5px;color:#714D03;scrollbar-base-color:#DEBB07;position:absolute; top:-50px; left:500px; width:300px; height:150px;"> <font size="5" color ="Black"><b><i><u>Summer semester at SRH Heidelberg!</u></i></b></font> 
+<iframe width="320" height="245"
+src="http://www.youtube.com/embed/QJslIw_VB4Y">
+</iframe>
+
+<span style="line-height:3em;padding:10px;color:#714D03;scrollbar-base-color:#DEBB07;position:absolute; top:400px; left:-505px; width:300px; height:150px;"> <font size="5" color ="Black"><b><i><u>ICE BUCKET Challenge at SRH!</u></i></b></font> 
+<iframe width="320" height="245"
+src="http://www.youtube.com/embed/s0mPfEvquEY">
+</iframe>
+
+<span style="line-height:3em;padding:10px;color:#714D03;scrollbar-base-color:#DEBB07;position:absolute; top:50px; left: 500px; width:300px; height:150px;"> <font size="5" color ="Black"><b><i><u>Open Campus day</u></i></b></font> 
+<iframe width="320" height="245"
+src="http://www.youtube.com/embed/pYoTbGsxU10">
+</iframe>
+
+
+		 
+
+		  
+<!-- logos-->
+		
+         
+		 <p>
+		 </P>
+		
+		 
+<BR><BR></BR><BR></BR>  <footer id="foot01"></footer>
+  </div>
+  <script src="script.js"></script>
+</BODY>
+</HTML>
