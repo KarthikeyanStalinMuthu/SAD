@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Login/Sign up</title>
+    <link rel="stylesheet" href="../../jqwidgets/styles/jqx.base.css" type="text/css" />
+    <link rel="stylesheet" href="../../jqwidgets/styles/jqx.summer.css" type="text/css" />
+    <script type="text/javascript" src="../scripts/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxcore.js"></script>
+     <script type="text/javascript" src="../../scripts/demos.js"></script>
+    <script type="text/javascript" src="../../jqwidgets/jqxwindow.js"></script>
+	<script type="text/javascript" src="../../jqwidgets/jqxbuttons.js"></script>
+	    <link rel="stylesheet" href="jqwidgets/styles/jqx.darkblue.css" type="text/css" />
+
+			<style>
+/* Background Image*/	
+	body{
+	background-image:url(login.png);
+	    background-size: 500px 300px;
+	}
+	</style>
+
+</head>
+<body class = 'default'>
+    <div id='content'>
+        <script type="text/javascript">
+            $(document).ready(function () {
+						// Create jqxButton widgets.
+				$("#defaultButton").jqxButton();
+                $("#successButton").jqxButton({ template: "success" });
+			    $("#linkButton").jqxButton({ template: "link" });
+				$('#jqxButton').jqxButton({
+    theme: 'energyblue'
+});
+			// CREATE WINDOW
+                $("#jqxwindow").jqxWindow({ height: 70, width: 300, theme: 'summer', isModal: true, autoOpen: false, resize:none});
+                $("#popup").click(function () {
+                    $("#jqxwindow").jqxWindow('open');
+                });
+                $("#button_input").click(function () {
+                    var T = $("#text_input").val();
+                    $("#textbox").text(T);
+                    $("#jqxwindow").jqxWindow('close');
+                });
+                $("#button_no").click(function () {
+                    $("#jqxwindow").jqxWindow('close');
+                });
+            });
+        </script>
+		        <div id='jqxwindow'>
+            <div>
+               <p><font color ="white"> Sign up</font> </p></div>
+				<!--for vertical space-->
+				<p>
+				</p>
+            <div>
+<font color ="white">Email:</font><BR>
+<input type="text" id="text_input" /> <BR>
+<font color ="white">Password:</font> <BR>
+<input type="text" id="text_input" /> <BR>
+<font color ="white">Retype password:</font><BR>
+<input type="text" id="text_input" /> <BR>
+                <br />
+                <!--<input type="button" value="Cancel" id="mybutton" />-->
+						<button id="linkButton">link</button>
+				        <button id="successButton">Sign up</button>
+						  <span style="display:inline-block; width: 40px;"></span> <!-- Space-->
+            </div>
+        </div>
+       <!-- <button id="popup">
+            Popup window!</button> 
+        <p>
+            Textbox:</p>
+        <div id="textbox" style="width: 300px; height: 300px; border: 2px solid green;">-->
+        </div> 
+    </div>
+</body>
+</html>
