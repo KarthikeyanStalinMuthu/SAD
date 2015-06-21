@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+  <title>Informatics Department</title>
+    <link href="site.css" rel="stylesheet">
+	<style>
+/* Background Image*/	
+	body{
+	background-image:url(IT3.png);
+	    background-size: 1600px 1300px;
+	}
+	</style>
+		<img src="logo1.png"
+	 style="width:170px;height:100px">
+	 
+	 <span style="display:inline-block; width: 10px;"></span>
+	 <img src="logo2.png"
+	  style="width:170px;height:100px">
+	  
+	 <span style="display:inline-block; width: 30px;"></span>
+	 <img src="logo3.png"
+	  style="width:840px;height:100px">
+</head>
+<BODY>
+<nav id="nav01"></nav>
+    <div id="main">
+			 <span style="display:inline-block; width: 350px;"></span>
+	         <img src ="informatics.png" style="width:500px;height1050px"><BR>
+			 <span style="display:inline-block; width: 300px;"></span>
+
+    <font size ="5"color ="Black"><b><i>Choose your way of knowing the news:</i></b></font><BR>
+			<span style="display:inline-block; width: 300px;"></span>
+				
+<!-- assign href to the logo--->
+<!-- onClick - to get the id of the button-->
+
+<!--Audios-->
+		<a href='ed_IT_music.html' id="1" onClick="reply_click(this.id)"> <input type="image" src="logo5.png"
+		alt="Submit" width="170" height="150"> </a>	
+	        <!-- <img src ="logo5.png" style="width:170px;height100px">-->
+			  <span style="display:inline-block; width: 30px;"></span>
+			  
+<!--Read news-->
+		 <a href='Read_IT.html'> <input type="image" src="read.png"
+		alt="Submit" width="170" height="150"> </a>				 
+		<span style="display:inline-block; width: 30px;"></span>
+		  
+		
+<!--Videos-->
+		<a href='IT_Video.html'> <input type="image" src="logo7.png"
+		alt="Submit" width="170" height="150"> </a><BR>			
+		<span style="display:inline-block; width: 300px;"></span>
+			
+<!-- Text for the images-->
+			<font size ="5" color ="blue"> <b> <i>Listen to news</i></b></font>
+			  <span style="display:inline-block; width: 50px;"></span>
+			<font size ="5" color ="red"> <b> <i>Read news</i></b></font>
+			  <span style="display:inline-block; width: 50px;"></span>
+			<font size ="5" color ="black"> <b> <i>Watch Videos</i></b></font>
+			
+	
+<!--Footer-->
+    <footer id="foot01"></footer>
+  </div>
+  <script src="script.js"></script>
+</BODY>
+</HTML>
